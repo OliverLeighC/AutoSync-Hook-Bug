@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  migrations-pg:
+    build: .
+    image: migrations-pg
+  registry:
+    image: registry:2
+    ports:
+      - 127.0.0.1:8000:5000
+    environment:
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    volumes:
+      - ./data:/data

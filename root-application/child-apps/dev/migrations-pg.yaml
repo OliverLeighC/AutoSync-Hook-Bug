@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: example-migration-job
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: migrations-pg
+    repoURL: https://github.com/OliverLeighC/AutoSync-Hook-Bug.git
+    targetRevision: main
+    helm:
+      valueFiles:
+        - values.yaml
+      parameters:
+        - name: imageTag
+          value: staged-552138452accb9a66b6f40cbd1c0e8800f62a5d1-1656015181
+  syncPolicy:
+    automated: {}

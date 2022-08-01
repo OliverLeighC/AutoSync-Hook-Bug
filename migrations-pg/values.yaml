@@ -1,0 +1,6 @@
+imageRegistry: 127.0.0.1:8000/migrations-pg
+imageTag: staged-example-1
+pgPort: 5432
+pgServer: 127.0.0.1
+pgPassword: asupercoolpassword
+pgUser: postgres
