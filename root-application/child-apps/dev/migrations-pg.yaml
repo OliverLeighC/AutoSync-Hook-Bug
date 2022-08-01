@@ -11,7 +11,7 @@ spec:
   source:
     path: migrations-pg
     repoURL: https://github.com/OliverLeighC/AutoSync-Hook-Bug.git
-    targetRevision: master
+    targetRevision: main
     helm:
       valueFiles:
         - values.yaml

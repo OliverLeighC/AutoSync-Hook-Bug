@@ -37,6 +37,6 @@ spec:
             - name: FlywayEnvironment
               value: {{ .Release.Namespace }}
             - name: pgPassword
-              value: {{ .Values.pgPort | quote }}
+              value: {{ .Values.pgPassword | quote }}
             - name: pgUser
-              value: {{ .Values pgPassword | quote }}
+              value: {{ .Values pgUser | quote}}

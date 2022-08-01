@@ -13,7 +13,7 @@ spec:
   source:
     path: root-application/child-apps/dev
     repoURL: https://github.com/OliverLeighC/AutoSync-Hook-Bug.git
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated: {}
     syncOptions:
