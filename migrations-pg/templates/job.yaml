@@ -24,19 +24,11 @@ spec:
           imagePullPolicy: Always
           command: ["/bin/sh","-c"]
           args: 
-            - /pg-scripting/migrate-db-all.sh $(pgServer) \
-              $(pgPort) \
-              $(pgUser) \
-              $(pgPassword) \
+            - /pg-scripting/migrate-db-all.sh 127.0.0.1 \
+              5432 \
+              postgres \
+              asupercoolpassword \
               $(FlywayEnvironment)
           env:
-            - name: pgServer
-              value: {{ .Values.pgServer | quote }}
-            - name: pgPort
-              value: {{ .Values.pgPort | quote }}
             - name: FlywayEnvironment
               value: {{ .Release.Namespace }}
-            - name: pgPassword
-              value: {{ .Values.pgPort | quote }}
-            - name: pgUser
-              value: {{ .Values pgPassword | quote }}
