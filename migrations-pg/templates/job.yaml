@@ -39,4 +39,4 @@ spec:
             - name: pgPassword
               value: {{ .Values.pgPassword | quote }}
             - name: pgUser
-              value: {{ .Values pgUser | quote}}
+              value: {{ .Values.pgUser | quote}}
