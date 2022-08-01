@@ -17,6 +17,6 @@ spec:
         - values.yaml
       parameters:
         - name: imageTag
-          value: staged-552138452accb9a66b6f40cbd1c0e8800f62a5d1-1656015181
+          value: staged-example-1
   syncPolicy:
     automated: {}
